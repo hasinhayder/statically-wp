@@ -11,7 +11,7 @@
 
     <div class="social">
         <span class="rating">
-            <?php _e( '<span class="wide-display">Do you think this is useful? Be kind and</span> rate statically.io', 'statically' ); ?>
+            <?php _e( '<span class="wide-display">Do you think this is useful? Be kind and</span> rate Statically', 'statically' ); ?>
             <a class="stars" href="https://wordpress.org/support/plugin/statically/reviews/?filter=5#new-post" target="_blank">
                 <i class="dashicons dashicons-star-filled"></i>
                 <i class="dashicons dashicons-star-filled"></i>
@@ -23,7 +23,7 @@
         <p><?php _e( 'and', 'statically' ); ?></p>
         <span class="twitter">
             <span class="mobile-block">
-                <?php _e( 'Share with your friends so their website is as fast as yours!', 'statically' ); ?>
+                <?php _e( 'Share with friends so their website fast like yours!', 'statically' ); ?>
             </span>
             <a
                 class="tweet"

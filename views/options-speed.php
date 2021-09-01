@@ -13,12 +13,6 @@
                         <input type="checkbox" name="statically[webp]" id="statically_webp" value="1" <?php checked(1, $options['webp']) ?> />
                         <?php _e( 'Automatically generate WebP versions of original images on the fly', 'statically' ); ?>
                     </label>
-
-                    <?php if ( ! Statically::is_custom_domain() ) : ?>
-                        <p class="description">
-                            <i class="dashicons dashicons-info"></i> <?php _e( 'CDN will send WebP when the resulting image is smaller than the original (only available via Cloudflare).', 'statically' ); ?>
-                        </p>
-                    <?php endif; ?>
                 </fieldset>
             </td>
         </tr>
@@ -97,13 +91,13 @@
 
         <tr valign="top">
             <th scope="row">
-                <?php _e( 'Disable for Logged In Users', 'statically' ); ?>
+                <?php _e( 'Disable for logged-in users', 'statically' ); ?>
             </th>
             <td>
                 <fieldset>
                     <label for="statically_private">
                         <input type="checkbox" name="statically[private]" id="statically_private" value="1" <?php checked(1, $options['private']) ?> />
-                        <?php _e( 'This will disable CDN for logged in users', 'statically' ); ?>
+                        <?php _e( 'This will disable CDN for logged-in users', 'statically' ); ?>
                     </label>
                 </fieldset>
             </td>

@@ -130,6 +130,10 @@ body.admin_page_statically-debugger #wpcontent {
 .stly .button-secondary:hover, .stly .button-secondary:focus {
   box-shadow: 0 0 0 3px rgb(190, 190, 190);
 }
+.stly .button-disabled {
+  background: #fff!important;
+  border: 1px solid #dcdcde!important;
+}
 
 /** Header */
 .stly-header-container {
@@ -366,7 +370,7 @@ body.admin_page_statically-debugger #wpcontent {
 }
 
 .stly .support-me .logo {
-  width: 96px;
+  width: 72px;
 }
 
 .stly .support-me .title {
