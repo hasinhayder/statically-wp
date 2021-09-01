@@ -76,7 +76,7 @@ class Statically
         add_action( 'all_admin_notices', [ __CLASS__, 'statically_requirements_check' ] );
 
         /* for custom domain */
-        if ( self::is_custom_domain() ) {
+        if ( self::is_custom_domain() || defined('STATICALLY_PRO') ) {
             if ( self::admin_pagenow( 'statically' ) ) {
                 add_action( 'admin_init', [ __CLASS__, 'ajax_analytics' ] );
                 add_action( 'admin_init', [ __CLASS__, 'ajax_purge' ] );
