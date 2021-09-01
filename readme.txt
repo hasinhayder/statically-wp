@@ -98,7 +98,7 @@ Statically is a family friendly site and we DO NOT intentionally accept or allow
 
 = 1.2 =
 * Rebranding to Statically
-* Add Purge menu
+* Add Caching menu
 
 = 1.1.3 =
 * Fixed a missing default Image path
