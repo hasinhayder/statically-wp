@@ -109,8 +109,8 @@ class Statically_Settings
      */
     public static function add_settings_page() {
         $page = add_menu_page(
-            'statically.io',
-            'statically.io',
+            'Statically',
+            'Statically',
             'manage_options',
             'statically',
             [

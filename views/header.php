@@ -28,14 +28,7 @@ $statically_logo_url = plugin_dir_url( STATICALLY_FILE ) . 'static/statically.sv
     <ul class="stly">
 
     <?php if ( Statically::admin_pagenow( 'statically' ) ) : ?>
-        <li>
-            <a data-stly-tab="general" href="#general">
-                <?php _e( 'General', 'statically' ); ?>
-                <?php if ( ! Statically::is_custom_domain() ) : ?>
-                <span class="new"><?php _e( 'New', 'statically' ); ?></span>
-                <?php endif; ?>
-            </a>
-        </li>
+        <li><a data-stly-tab="general" href="#general"><?php _e( 'General', 'statically' ); ?></a></li>
         <?php if ( Statically::is_custom_domain() ) : ?>
         <li>
             <a data-stly-tab="analytics" href="#analytics">
@@ -45,14 +38,11 @@ $statically_logo_url = plugin_dir_url( STATICALLY_FILE ) . 'static/statically.sv
         </li>
         <?php endif; ?>
         <li><a data-stly-tab="speed" href="#speed"><?php _e ( 'Speed', 'statically'); ?></a></li>
-        <?php if ( Statically::is_custom_domain() ) : ?>
         <li>
             <a data-stly-tab="caching" href="#caching">
-                <?php _e ( 'Caching', 'statically'); ?>
-                <span class="new"><?php _e( 'Beta', 'statically' ); ?></span>
+                <?php _e ( 'Caching', 'statically'); ?><span class="new"><?php _e( 'Beta', 'statically' ); ?></span>
             </a>
         </li>
-        <?php endif; ?>
         <li><a data-stly-tab="extra" href="#extra"><?php _e( 'Extra', 'statically' ); ?></a></li>
         <li><a data-stly-tab="labs" href="#labs"><?php _e( 'Labs', 'statically' ); ?></a></li>
         <li><a data-stly-tab="tools" href="#tools"><?php _e( 'Tools ', 'statically' ); ?></a></li>

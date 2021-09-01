@@ -1,8 +1,14 @@
-<?php defined( 'ABSPATH' ) OR exit; ?>
+<?php
+
+defined( 'ABSPATH' ) OR exit;
+
+$options = Statically::get_options();
+
+?>
 
 <section class="stly-plugin-container">
     <div class="stly stly-options wrap">
-        <h2 style="display:none"><?php _e( 'statically.io', 'statically' ); ?></h2>
+        <h2 style="display:none"><?php _e( 'Statically', 'statically' ); ?></h2>
 
         <?php if ( Statically::admin_pagenow( 'statically' ) ) : ?>
 
@@ -17,10 +23,7 @@
 
             include STATICALLY_DIR . '/views/options-speed.php';
             include STATICALLY_DIR . '/views/options-extra.php';
-
-            if ( Statically::is_custom_domain() )
-                include STATICALLY_DIR . '/views/options-caching.php';
-
+            include STATICALLY_DIR . '/views/options-caching.php';
             include STATICALLY_DIR . '/views/options-labs.php';
             include STATICALLY_DIR . '/views/options-tools.php';
             include STATICALLY_DIR . '/views/options-sponsor.php';
@@ -30,13 +33,10 @@
 
             <?php
 
-            if ( Statically::is_custom_domain() )
+            if ( $options['statically_zone_id'] )
                 include STATICALLY_DIR . '/views/dialog-caching.php';
         
         endif;
-        
-        if ( Statically::admin_pagenow( 'statically-debugger' ) )
-            include STATICALLY_DIR . '/views/debugger.php';
         ?>
     </div>
 </section>

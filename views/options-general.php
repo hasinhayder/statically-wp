@@ -3,7 +3,7 @@
 <div data-stly-layout="general">
     <?php if ( ! statically_use_https() ) { ?>
         <p><i class="dashicons dashicons-warning" style="color:#ffb900"></i>
-        <?php _e( 'In order for statically.io to work, website must have HTTPS enabled.', 'statically' ); ?>
+        <?php _e( 'In order for Statically to work, website must have HTTPS enabled.', 'statically' ); ?>
         </p>
     <?php } ?>
 
@@ -20,8 +20,7 @@
                     </label>
 
                     <p class="description">
-                        <?php _e( 'Enter Zone URL without trailing slash', 'statically' ); ?>. <br>
-                        <?php _e( 'Example:', 'statically' ); ?> <code>https://example.com</code> <?php _e( 'or', 'statically' ); ?> <code>https://cdn.example.com</code> <?php _e( 'if you have a custom domain setup', 'statically' ); ?>.
+                        <?php _e( 'Your Zone URL is your site URL', 'statically' ); ?> <?php _e( 'or', 'statically' ); ?> <code>https://cdn.example.com</code> <?php _e( 'if you have a custom domain setup. Enter without trailing slash.', 'statically' ); ?>
                     </p>
                 </fieldset>
             </td>
@@ -38,13 +37,13 @@
                     </label>
 
                     <p class="description">
-                        <?php _e( 'API key to make this plugin working. Never share it to anybody! Treat this API key as a password. &#8212; <a href="https://statically.io/wordpress/" target="_blank">Get one here</a>', 'statically' ); ?>
+                        <?php _e( 'API key to make this plugin work. Never share it with anyone! Treat this API key like a password &#8212; <a href="https://statically.io/wordpress/" target="_blank">Get one here</a>', 'statically' ); ?>
                     </p>
                 </fieldset>
             </td>
         </tr>
 
-        <tr valign="top" <?php if ( ! Statically::is_custom_domain() ) echo 'style="display:none"'; ?>>
+        <tr valign="top" <?php if ( Statically::is_custom_domain() || defined('STATICALLY_PRO') ) echo 'style="display:table-row"'; ?> style="display:none">
             <th scope="row">
                 <?php _e( 'Zone ID', 'statically' ); ?>
             </th>
@@ -74,7 +73,6 @@
         <tr valign="top" <?php if ( Statically::is_custom_domain() ) echo 'style="display:none"'; ?>>
             <th scope="row">
                 <?php _e( 'CSS', 'statically' ); ?>
-                <span class="new"><?php _e( 'New', 'statically' ); ?></span>
             </th>
             <td>
                 <fieldset>
