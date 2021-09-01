@@ -96,6 +96,9 @@ Statically is a family friendly site and we DO NOT intentionally accept or allow
 
 == Changelog ==
 
+= 1.2.1 =
+* Fixed purge cache
+
 = 1.2 =
 * Rebranding to Statically
 * Add Caching menu
