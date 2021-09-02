@@ -3,7 +3,7 @@
  * Plugin Name: Statically
  * Plugin URI:  https://statically.io/wordpress/
  * Description: A simple optimization for static assets.
- * Version:     1.2
+ * Version:     1.2.1
  * Author:      Statically
  * Author URI:  https://statically.io
  * License:     GPLv2 or later
@@ -14,7 +14,7 @@
 defined( 'ABSPATH' ) OR exit;
 
 /* constants */
-define( 'STATICALLY_VERSION', '1.2' );
+define( 'STATICALLY_VERSION', '1.2.1' );
 define( 'STATICALLY_FILE', __FILE__ );
 define( 'STATICALLY_DIR', dirname( __FILE__ ) );
 define( 'STATICALLY_BASE', plugin_basename( __FILE__ ) );
